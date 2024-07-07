@@ -6,7 +6,11 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(158, 158, 158);
 }
 
 
@@ -56,6 +60,65 @@ body {
 .navbar-button:hover {
     background-color: #0056b3;
 }
+
+.container{
+    position: relative;
+    width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    border-radius: 25px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card{
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+}
+
+.card .from{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .heading{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+}
+
+.dropdown-container .dropdown-toggle{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 30px;
+    background: #d3d3d3;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dropdown-container .dropdown-toggle span{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.dropdown-container .dropdown-toggle img{
+    width: 20px;
+}
+
+.dropdown-container.active .dropdown-toggle{
+    border-radius: 20px 20px 0 0;
+}
+
+.dropdown-container .dropdown-menu{
+    
+}
+
 
 
 @media (max-width: 310px) {
