@@ -10,7 +10,10 @@ body {
     font-family: Arial, sans-serif;
     justify-content: center;
     align-items: center;
-    background-color: rgb(158, 158, 158);
+    background-image: url(img/B_G.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
 }
 
 
@@ -62,14 +65,14 @@ body {
 }
 
 .container{
+    display: flex;
     position: relative;
     width: 1200px;
     padding: 0 20px;
     display: flex;
     border-radius: 25px;
     gap: 10px;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .container .card{
@@ -77,9 +80,11 @@ body {
     padding: 30px;
     border-radius: 20px;
     background-color: rgb(240, 240, 240);
+    
 }
 
-.card .from{
+.card .from,
+.card .to{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -97,9 +102,14 @@ body {
     align-items: center;
     padding: 15px 20px;
     border-radius: 30px;
-    background: #d3d3d3;
+    background: #dadada;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+.dropdown-container .dropdown-toggle img{
+    margin-left: 10px;
+    
 }
 
 .dropdown-container .dropdown-toggle span{
@@ -116,7 +126,155 @@ body {
 }
 
 .dropdown-container .dropdown-menu{
-    
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    display: none;
+    padding: 20px;
+    z-index: 1;
+    list-style: none;
+    flex-direction: column;
+    background-color: #333;
+    transition: all 0.3s;
+    border-radius: 0 0 20px 20px;
+}
+
+.dropdown-container .dropdown-menu::-webkit-scrollbar{
+    display: none;
+}
+
+.dropdown-container.active .dropdown-menu{
+    display: flex;
+}
+
+.dropdown-container.active .dropdown-menu li{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-bottom: 1px solid blue;
+    transition: all 0.3s;
+}
+
+.dropdown-container.active .dropdown-menu li.active{
+    color: red;
+    background-color: aqua;
+}
+
+.dropdown-container.active .dropdown-menu li::not(.active):hover{
+    background-color: black;
+}
+
+.container .text-area{
+    position: relative;
+}
+
+.container textarea{
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: transparent;
+    resize: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 15px;
+} 
+
+
+.container .text-area .chars{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 0.87rem;
+    color: black;
+}
+
+.card-bottom{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 2px solid #dadada;
+}
+
+.card-bottom p{
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.card-bottom label{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #dadada;
+}
+
+.card-bottom img{
+    width: 20px;
+}
+.card-bottom label:hover{
+    color: #000000;
+    background-color: #206eff;
+}
+
+.card-bottom span{
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.card-bottom button{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #dadada;
+    outline: none;
+    border: none;
+}
+
+.card-bottom button:hover{
+    color: #000000;
+    background-color: #206eff;
+}
+
+.container .center{
+    position: relative;
+}
+
+.swap-possition img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid #dadada;
+    transition: all 0.3s;
+    color: #7a7a7a;
+    background-color: #007bff;
+}
+.swap-possition img:hover{
+    transform: translateX(-50%) scale(1.1);
 }
 
 
