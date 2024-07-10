@@ -353,4 +353,58 @@ const languages = [
     native: "ייִדיש",
     code: "yi",
   },
+  {
+    no: "59",
+    name: "Sinhala",
+    native: "සිංහල",
+    code: "si",
+  },
+  {
+    no: "60",
+    name: "Bengali",
+    native: "বাংলা",
+    code: "bn"
+  },
+  {
+    no: "61",
+    name: "Kurdish",
+    native: "Kurdî",
+    code: "ku"
+  },
+  {
+    no: "62",
+    name: "Pashto",
+    native: "پښتو",
+    code: "ps"
+  },
+  {
+    no: "63",
+    name: "Somali",
+    native: "Soomaali",
+    code: "so"
+  },
+  {
+    no: "64",
+    name: "Tamil",
+    native: "தமிழ்",
+    code: "ta"
+  },
+  {
+    no: "65",
+    name: "Telugu",
+    native: "తెలుగు",
+    code: "te"
+  },
+  {
+    no: "66",
+    name: "Uzbek",
+    native: "Oʻzbek",
+    code: "uz"
+  },
+  {
+    no: "67",
+    name: "Zulu",
+    native: "isiZulu",
+    code: "zu"
+  }
 ];

@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TransPhrase</title>
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
@@ -42,6 +45,7 @@
       </div>
       <div class="text-area">
         <textarea id="input-text" cols="30" rows="10" placeholder="Enter your text here"></textarea>
+        <img src="img/copy.png" onclick="inputcopyText()">
         <div class="chars"><span id="input-chars">0</span> / 5000</div>
       </div>
       <div class="card-bottom">
@@ -78,7 +82,7 @@
       </div>
       <div class="text-area">
         <textarea id="output-text" cols="30" rows="10" placeholder="Translated Text"></textarea>
-        <div class="chars"><span id="input-chars">0</span> / 5000</div>
+        <div class="copy"><img src="img/copy.png" onclick="outputcopyText()"></div>
       </div>
       <div class="card-bottom">
         <p>Or Download as Document !</p>

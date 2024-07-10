@@ -311,6 +311,21 @@ header {
     transform: translateX(-50%) scale(1.1);
 }
 
+.copy img{
+    width: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    cursor: pointer;
+}
+
+.text-area img{
+    width: 15px;
+    position:relative;
+    bottom: 10px;
+    cursor: pointer;
+}
+
 
 @media (max-width :800px) {
     .container{
