@@ -1,101 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TransPhrase</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-      <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-left">
-                <div class="navbar-logo">
-                    <img src="img/translate.png" alt="Logo">
-                </div>
-                <div class="navbar-webname">TransPhrase</div>
-            </div>
-            <button class="navbar-button">Home</button>
+
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-left">
+          <div class="navbar-logo">
+            <img src="img/translate.png" alt="Logo">
+          </div>
+          <div class="navbar-webname">TransPhrase</div>
         </div>
+        <button class="navbar-button">Home</button>
+      </div>
     </nav>
-    </header>
+  </header>
 
-    <div class="container">
-        <div class="card input-wrapper">
-          <div class="from">
-            <span class="heading">From :</span>
-            <div class="dropdown-container" id="input-language">
-              <div class="dropdown-toggle ">
-                <img src="img/global.png" alt="">
-                <span class="selected" data-value="auto">Auto Detect</span>
-                <img src="img/down.png" alt="">
-              </div>
-              <ul class="dropdown-menu">
-                <li class="option active"> Menu Item 1</li>
-                <li class="option"> Menu Item 2</li>
-              </ul>
-            </div>
+  <div class="container">
+    <div class="card input-wrapper">
+      <div class="from">
+        <span class="heading">From :</span>
+        <div class="dropdown-container" id="input-language">
+          <div class="dropdown-toggle ">
+            <img src="img/global.png" alt="">
+            <span class="selected" data-value="auto">Auto Detect</span>
+            <img src="img/down.png" alt="">
           </div>
-          <div class="text-area">
-            <textarea
-              id="input-text"
-              cols="30"
-              rows="10"
-              placeholder="Enter your text here"
-            ></textarea>
-            <div class="chars"><span id="input-chars">0</span> / 5000</div>
-          </div>
-          <div class="card-bottom">
-            <p>Or choose your Document !</p>
-            <label for="upload-document">
-              <span id="upload-title">Choose File</span>
-              <img src="img/cloud-computing.png" alt="">
-              <input type="file" id="upload-document" hidden />
-            </label>
-          </div>
+          <ul class="dropdown-menu">
+            <li class="option active">DropDown Menu Item 1</li>
+            <li class="option">DropDown Menu Item 2</li>
+          </ul>
         </div>
-
-        <div class="center">
-          <div class="swap-possition">
-            <img src="img/left-right.png" alt="">
-          </div>
-        </div>
-
-
-        <div class="card output-box">
-          <div class="to">
-            <span class="heading">To :</span>
-            <div class="dropdown-container" id="output-language">
-              <div class="dropdown-toggle ">
-                <img src="img/global.png" alt="">
-                <span class="selected" data-value="auto">English</span>
-                <img src="img/down.png" alt="">
-              </div>
-              <ul class="dropdown-menu">
-                <li class="option active"> Menu Item 1</li>
-                <li class="option"> Menu Item 2</li>
-              </ul>
-            </div>
-          </div>
-          <div class="text-area">
-            <textarea
-              id="output-text"
-              cols="30"
-              rows="10"
-              placeholder="Translated Text"
-            ></textarea>
-            <div class="chars"><span id="input-chars">0</span> / 5000</div>
-          </div>
-          <div class="card-bottom">
-            <p>Or Download as Document !</p>
-            <button id="download-document">
-              <span>Download</span>
-              <img src="img/download.png" alt="">
-            </button>
-          </div>
-        </div>
+      </div>
+      <div class="text-area">
+        <textarea id="input-text" cols="30" rows="10" placeholder="Enter your text here"></textarea>
+        <div class="chars"><span id="input-chars">0</span> / 5000</div>
+      </div>
+      <div class="card-bottom">
+        <p>Or choose your Document !</p>
+        <label for="upload-document">
+          <span id="upload-title">Choose File</span>
+          <img src="img/cloud-computing.png" alt="">
+          <input type="file" id="upload-document" hidden />
+        </label>
+      </div>
     </div>
 
+    <div class="center">
+      <div class="swap-possition">
+        <img src="img/left-right.png" alt="">
+      </div>
+    </div>
+
+
+    <div class="card output-box">
+      <div class="to">
+        <span class="heading">To :</span>
+        <div class="dropdown-container" id="output-language">
+          <div class="dropdown-toggle ">
+            <img src="img/global.png" alt="">
+            <span class="selected" data-value="auto">English</span>
+            <img src="img/down.png" alt="">
+          </div>
+          <ul class="dropdown-menu">
+            <li class="option active"> Menu Item 1</li>
+            <li class="option"> Menu Item 2</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-area">
+        <textarea id="output-text" cols="30" rows="10" placeholder="Translated Text"></textarea>
+        <div class="chars"><span id="input-chars">0</span> / 5000</div>
+      </div>
+      <div class="card-bottom">
+        <p>Or Download as Document !</p>
+        <button id="download-document">
+          <span>Download</span>
+          <img src="img/download.png" alt="">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="languages.js"></script>
+  <script src="script.js"></script>
+
 </body>
+
 </html>

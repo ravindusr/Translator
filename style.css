@@ -81,7 +81,6 @@ header {
 }
 
 .container{
-    display: flex;
     position: relative;
     width: 1200px;
     padding: 0 20px;
@@ -98,6 +97,8 @@ header {
     
 }
 
+
+
 .card .from,
 .card .to{
     display: flex;
@@ -105,12 +106,26 @@ header {
     gap: 20px;
 }
 
-.card .heading{
+.container .card .from {
+    margin-right: 20px;
+}
+
+.container .card .to {
+    margin-left: 20px;
+}
+
+.container .card .heading{
     font-size: 0.8rem;
     font-weight: 600;
     color: rgb(0, 0, 0);
     white-space: nowrap;
 }
+
+.dropdown-container {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+  }
 
 .dropdown-container .dropdown-toggle{
     display: flex;
@@ -152,8 +167,8 @@ header {
     z-index: 1;
     list-style: none;
     flex-direction: column;
-    background-color: #333;
-    transition: all 0.3s;
+    background-color: #dadada;
+    transition: all 1s;
     border-radius: 0 0 20px 20px;
 }
 
@@ -170,13 +185,17 @@ header {
     border-radius: 20px;
     cursor: pointer;
     margin-bottom: 5px;
-    border-bottom: 1px solid blue;
-    transition: all 0.3s;
+    border-bottom: 1px solid #e2e2e2;
+    transition: all 0.3s ease;
 }
 
+.dropdown-container .dropdown-menu li:hover {
+    background-color: #206eff;
+  }
+
 .dropdown-container.active .dropdown-menu li.active{
-    color: red;
-    background-color: aqua;
+    color: rgb(0, 0, 0);
+    background-color: #206eff;
 }
 
 .dropdown-container.active .dropdown-menu li::not(.active):hover{
