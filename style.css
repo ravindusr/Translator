@@ -22,7 +22,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 20px 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -309,6 +309,7 @@ header {
     color: #7a7a7a;
     background-color: #007bff;
 }
+
 .swap-possition img:hover{
     transform: translateX(-50%) scale(1.1);
 }
