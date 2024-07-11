@@ -102,7 +102,6 @@ const uploadDoc = document.querySelector("#upload-document"),
 uploadDoc.addEventListener("change",(e) => {
         const file = e.target.files[0];
         if(
-            file.type ==="application/pdf" ||
             file.type ==="application/msword" ||
             file.type ==="text/plain" 
         ){
@@ -114,7 +113,7 @@ uploadDoc.addEventListener("change",(e) => {
                 translate();
             };
         }else{
-            alert("Please Enter Valid file");
+            swal ( "Oops" ,  "File Type Not Supported" ,  "error" )
         }
     });
 
@@ -138,6 +137,7 @@ const inputChars = document.querySelector("#input-chars");
 
 inputTextElement.addEventListener("input" , (e) => {
     inputChars.innerHTML = e.target.value.length;
+
 });
 
 
@@ -163,4 +163,24 @@ function inputcopyText() {
     swal ( "Text Copied to Clipboard." ,  "" ,  "success" )
 }
 
+function clearTextArea() {
+  
+  var intextArea = document.getElementById("input-text");
+  var outtextArea = document.getElementById("output-text");
+  intextArea.value = "";
+  outtextArea.value="";
 
+  handleTextAreaInput();
+}
+
+function handleTextAreaInput() {
+  var textArea = document.getElementById("input-text");
+  var clearButton = document.getElementById("clearButton");
+
+  // Enable or disable the copy button based on the text area content
+  if (textArea.value.trim() === "") {
+      clearButton.style.display = "none";
+  } else {
+      clearButton.style.display = "block";
+  }
+}
